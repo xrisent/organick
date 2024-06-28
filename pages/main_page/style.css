@@ -40,9 +40,8 @@
 }
 
 .logo img{
-    width: 40px;
-    height: 55px;
-    margin-right: 10px;
+    width: 30%;
+    margin-right: 5px;
 }
 
 .logo{
@@ -51,11 +50,72 @@
 
 }
 
+.logo h2{
+    color: #274C5B;
+} 
+
+.search_tab button{
+    background: transparent;
+    border: none;
+}
+
+.search_tab form{
+    display: flex;
+}
+
+.search_tab button:active{
+    transform: translateY(3px);
+}
+
 .first_header ul{
     display: flex;
     list-style: none;
     column-gap: 30px;
     font-weight: bold;
+}
+
+.first_header a{
+    text-decoration: none;
+    color: #274C5B;
+    align-self: center;
+}
+
+.first_header ul li:hover {
+    color: #68A47F;
+}
+
+.dropdown{
+    position: relative;
+    align-self: center;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+    top: 100%;
+}
+
+.dropdown .dropdown-content a {
+    color: #274C5B;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+}
+
+.dropdown .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown a:hover{
+    color: #68A47F;
 }
 
 .second_header{
@@ -359,6 +419,7 @@
 .product_img{
     width: 180px;
     height: 190px;
+    align-self: center;
 }
 
 .product_content{
@@ -765,4 +826,9 @@ footer .container{
 
 .utility_pages a{
     text-decoration: none;
+}
+
+
+.burger{
+    display: none;
 }

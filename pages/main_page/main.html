@@ -6,6 +6,7 @@
     <title>Weestep</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <header>
@@ -17,18 +18,28 @@
                         <h2>Organick</h2>
                     </div>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Pages</li>
-                        <li>Shop</li>
-                        <li>Projects</li>
-                        <li>News</li>
+                        <a href="#"><li>Home</li></a>
+                        <a href="#"><li>About</li></a>
+                        <li class="dropdown">
+                            <a href="#">Pages</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Page 1</a></li>
+                                <li><a href="#">Page 2</a></li>
+                                <li><a href="#">Page 3</a></li>
+                            </ul>
+                        </li>
+                        <a href="../shop_page/shop.html"><li>Shop</li></a>
+                        <a href="#"><li>Projects</li></a>
+                        <a href="#"><li>News</li></a>
                     </ul>
+                    <div onclick="ShowBurger()" class="burger"></div>
                 </div>
                 <div class="second_header">
                     <div class="search_tab">
-                        <input type="text" placeholder="Search...">
-                        <img src="static/Search Icon.png" alt="">
+                        <form action="" method="get">
+                            <input type="text" placeholder="Search..." type="search">
+                            <button type="submit"><img src="static/Search Icon.png" alt=""></button>
+                        </form>
                     </div>
                     <div class="cart_header">
                         <img src="static/Cart Icon.png" alt="">
@@ -408,7 +419,7 @@
     </footer>
 
 
-
+    <script src="js.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
